@@ -1,0 +1,30 @@
+classDiagram
+    %% Definindo as Interfaces (Contratos)
+    class ReprodutorMusical {
+        <<interface>>
+        +tocar()
+        +pausar()
+        +selecionarMusica(String musica)
+    }
+
+    class AparelhoTelefonico {
+        <<interface>>
+        +ligar(String numero)
+        +atender()
+        +iniciarCorreioVoz()
+    }
+
+    class NavegadorInternet {
+        <<interface>>
+        +exibirPagina(String url)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+
+    %% Definindo a Classe Concreta que implementa as interfaces
+    class Iphone
+
+    %% Definindo os relacionamentos de implementação
+    Iphone --|> ReprodutorMusical
+    Iphone --|> AparelhoTelefonico
+    Iphone --|> NavegadorInternet
